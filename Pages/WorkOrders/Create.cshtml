@@ -1,64 +1,56 @@
 @page
 @model WorkOrderManagement.Pages.WorkOrders.CreateModel
 
-<h1 style="margin-bottom:20px;">
-    Create Work Order
-</h1>
+<div style="font-family:Arial;padding:30px;max-width:650px;">
+    <h1 style="margin-bottom:25px;">Create Work Order</h1>
 
-<form method="post"
-      style="max-width:500px;font-family:Arial;">
+    <form method="post" style="background-color:#f9fafb;border:1px solid #d1d5db;padding:22px;border-radius:8px;">
 
-    <div style="margin-bottom:15px;">
-        <label>Title</label><br />
+        <div asp-validation-summary="All"
+             style="color:#dc2626;margin-bottom:16px;">
+        </div>
 
-        <input asp-for="WorkOrder.Title"
-               style="width:100%;
-                      padding:10px;" />
-    </div>
+        <div style="margin-bottom:16px;">
+            <label style="font-weight:bold;">Title</label><br />
+            <input asp-for="WorkOrder.Title"
+                   required
+                   style="width:100%;padding:10px;border:1px solid #9ca3af;border-radius:5px;margin-top:5px;" />
+        </div>
 
-    <div style="margin-bottom:15px;">
-        <label>Description</label><br />
+        <div style="margin-bottom:16px;">
+            <label style="font-weight:bold;">Description</label><br />
+            <textarea asp-for="WorkOrder.Description"
+                      required
+                      rows="5"
+                      style="width:100%;padding:10px;border:1px solid #9ca3af;border-radius:5px;margin-top:5px;"></textarea>
+        </div>
 
-        <textarea asp-for="WorkOrder.Description"
-                  rows="5"
-                  style="width:100%;
-                         padding:10px;"></textarea>
-    </div>
+        <div style="margin-bottom:16px;">
+            <label style="font-weight:bold;">Department</label><br />
+            <input asp-for="WorkOrder.Department"
+                   required
+                   style="width:100%;padding:10px;border:1px solid #9ca3af;border-radius:5px;margin-top:5px;" />
+        </div>
 
-    <div style="margin-bottom:15px;">
-        <label>Department</label><br />
+        <div style="margin-bottom:22px;">
+            <label style="font-weight:bold;">Status</label><br />
+            <select asp-for="WorkOrder.Status"
+                    required
+                    style="width:100%;padding:10px;border:1px solid #9ca3af;border-radius:5px;margin-top:5px;">
+                <option>Open</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+        </div>
 
-        <input asp-for="WorkOrder.Department"
-               style="width:100%;
-                      padding:10px;" />
-    </div>
+        <button type="submit"
+                style="background-color:#2563eb;color:white;padding:10px 16px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">
+            Create
+        </button>
 
-    <div style="margin-bottom:20px;">
-        <label>Status</label><br />
-
-        <select asp-for="WorkOrder.Status"
-                style="width:100%;
-                       padding:10px;">
-
-            <option>Open</option>
-            <option>In Progress</option>
-            <option>Completed</option>
-
-        </select>
-    </div>
-
-    <button type="submit"
-            style="padding:10px 15px;
-                   background-color:#2563eb;
-                   color:white;
-                   border:none;
-                   border-radius:5px;">
-        Create
-    </button>
-
-    <a asp-page="/WorkOrders/Index"
-       style="margin-left:10px;">
-        Cancel
-    </a>
-
-</form>
+        <a asp-page="/WorkOrders/Index"
+           style="margin-left:12px;color:#374151;text-decoration:none;font-weight:bold;">
+            Cancel
+        </a>
+    </form>
+</div>
