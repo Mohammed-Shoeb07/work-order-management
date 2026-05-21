@@ -1,0 +1,64 @@
+@page
+@model WorkOrderManagement.Pages.WorkOrders.CreateModel
+
+<h1 style="margin-bottom:20px;">
+    Create Work Order
+</h1>
+
+<form method="post"
+      style="max-width:500px;font-family:Arial;">
+
+    <div style="margin-bottom:15px;">
+        <label>Title</label><br />
+
+        <input asp-for="WorkOrder.Title"
+               style="width:100%;
+                      padding:10px;" />
+    </div>
+
+    <div style="margin-bottom:15px;">
+        <label>Description</label><br />
+
+        <textarea asp-for="WorkOrder.Description"
+                  rows="5"
+                  style="width:100%;
+                         padding:10px;"></textarea>
+    </div>
+
+    <div style="margin-bottom:15px;">
+        <label>Department</label><br />
+
+        <input asp-for="WorkOrder.Department"
+               style="width:100%;
+                      padding:10px;" />
+    </div>
+
+    <div style="margin-bottom:20px;">
+        <label>Status</label><br />
+
+        <select asp-for="WorkOrder.Status"
+                style="width:100%;
+                       padding:10px;">
+
+            <option>Open</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+
+        </select>
+    </div>
+
+    <button type="submit"
+            style="padding:10px 15px;
+                   background-color:#2563eb;
+                   color:white;
+                   border:none;
+                   border-radius:5px;">
+        Create
+    </button>
+
+    <a asp-page="/WorkOrders/Index"
+       style="margin-left:10px;">
+        Cancel
+    </a>
+
+</form>

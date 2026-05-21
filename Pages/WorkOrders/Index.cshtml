@@ -1,0 +1,82 @@
+@page
+@model WorkOrderManagement.Pages.WorkOrders.IndexModel
+
+<h1 style="margin-bottom:20px;">Work Orders</h1>
+
+<p>
+    <a asp-page="/WorkOrders/Create"
+       style="padding:10px 15px;
+              background-color:#2563eb;
+              color:white;
+              text-decoration:none;
+              border-radius:5px;">
+        Create New Work Order
+    </a>
+</p>
+
+<br />
+
+<table style="border-collapse:collapse;
+              width:100%;
+              font-family:Arial;">
+
+    <thead style="background-color:#f3f4f6;">
+        <tr>
+            <th style="border:1px solid #ccc;padding:12px;">Id</th>
+            <th style="border:1px solid #ccc;padding:12px;">Title</th>
+            <th style="border:1px solid #ccc;padding:12px;">Department</th>
+            <th style="border:1px solid #ccc;padding:12px;">Status</th>
+            <th style="border:1px solid #ccc;padding:12px;">Created At</th>
+            <th style="border:1px solid #ccc;padding:12px;">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.WorkOrders)
+        {
+        <tr>
+            <td style="border:1px solid #ccc;padding:10px;">
+                @item.Id
+            </td>
+
+            <td style="border:1px solid #ccc;padding:10px;">
+                @item.Title
+            </td>
+
+            <td style="border:1px solid #ccc;padding:10px;">
+                @item.Department
+            </td>
+
+            <td style="border:1px solid #ccc;padding:10px;">
+                @item.Status
+            </td>
+
+            <td style="border:1px solid #ccc;padding:10px;">
+                @item.CreatedAt
+            </td>
+
+            <td style="border:1px solid #ccc;padding:10px;">
+
+                <a asp-page="/WorkOrders/Details"
+                   asp-route-id="@item.Id">
+                    Details
+                </a>
+                |
+
+                <a asp-page="/WorkOrders/Edit"
+                   asp-route-id="@item.Id">
+                    Edit
+                </a>
+
+                |
+                <a asp-page="/WorkOrders/Delete"
+                   asp-route-id="@item.Id"
+                   style="color:red;">
+                    Delete
+                </a>
+
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

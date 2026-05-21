@@ -1,0 +1,14 @@
+@page
+@model WorkOrderManagement.Pages.WorkOrders.DetailsModel
+
+<h1>Work Order Details</h1>
+
+<p><strong>Id:</strong> @Model.WorkOrder.Id</p>
+<p><strong>Title:</strong> @Model.WorkOrder.Title</p>
+<p><strong>Description:</strong> @Model.WorkOrder.Description</p>
+<p><strong>Department:</strong> @Model.WorkOrder.Department</p>
+<p><strong>Status:</strong> @Model.WorkOrder.Status</p>
+<p><strong>Created At:</strong> @Model.WorkOrder.CreatedAt</p>
+
+<a href="/WorkOrders/Edit?id=@Model.WorkOrder.Id">Edit</a> |
+<a href="/WorkOrders">Back</a>
