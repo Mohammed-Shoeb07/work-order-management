@@ -31,6 +31,10 @@ Run the application:
 ```bash
 docker compose up --build
 ```
+
+## Notes
+The SQL Server password inside `docker-compose.yml` is a demo-only local development password used for easy project setup.
+
 Open the application:
 
 - Main App:
