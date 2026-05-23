@@ -48,9 +48,11 @@ Open the application:
 - `Migrations` → Entity Framework migrations
 
 ## Screenshots
-<img width="1341" height="1037" alt="Swagger Get" src="https://github.com/user-attachments/assets/611dd681-3b1e-4355-ad53-20f56270f454" />
-<img width="1345" height="1078" alt="Swagger Post" src="https://github.com/user-attachments/assets/617dbec5-5c7a-4456-b6ed-2d53879ac1ed" />
-<img width="492" height="427" alt="Edit Work Order" src="https://github.com/user-attachments/assets/40710a98-57a1-4947-9df7-035902390050" />
-<img width="457" height="408" alt="Create Order" src="https://github.com/user-attachments/assets/32e48909-f1f4-46ea-ae3d-6b7ab44e95f1" />
-<img width="955" height="352" alt="Work Orders List" src="https://github.com/user-attachments/assets/4ecf689d-5f09-4a09-a479-35759ad23ad3" />
+<img width="955" height="352" alt="Work Orders List" src="https://github.com/user-attachments/assets/2b431cff-ce03-4287-8597-ebf4d7c29404" />
+<img width="457" height="408" alt="Create Order" src="https://github.com/user-attachments/assets/436aba76-821a-491e-8946-7ee1bc3e9db9" />
+<img width="492" height="427" alt="Edit Work Order" src="https://github.com/user-attachments/assets/667d9358-8f97-4286-a6d8-73c64d0c1338" />
+<img width="1345" height="1078" alt="Swagger Post" src="https://github.com/user-attachments/assets/b979e617-e417-4379-885f-9b5d78c2ab06" />
+<img width="1341" height="1037" alt="Swagger Get" src="https://github.com/user-attachments/assets/b0d7b689-5e5e-4d7f-b4c1-e7b7994b21e3" />
+
+
 
