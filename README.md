@@ -23,14 +23,14 @@ A simple ASP.NET Core Razor Pages application for managing work orders.
 ## Run Locally with Docker
 
 Clone the repository:
-
+```bash
 git clone https://github.com/Mohammed-Shoeb07/work-order-management.git
 cd work-order-management
-
+```
 Run the application:
-
+```bash
 docker compose up --build
-
+```
 Open the application:
 
 - Main App:
